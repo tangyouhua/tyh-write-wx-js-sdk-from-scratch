@@ -1,8 +1,13 @@
-var assert = require('assert');
-describe('Array', function() {
-    describe('#indexOf()', function() {
-        it('should return -1 when the value is not present', function() {
-            assert.equal([1,2,3].indexOf(4), -1);
+/*
+ * SDK 接口测试
+ */
+const should = require('should');
+const qcloud = require('../index');
+
+describe('index.js', function () {
+    describe('module: qcloud', function () {
+        it('should export login() method', function () {
+            qcloud.login.should.be.a.Function();
         });
     });
 });
