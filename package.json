@@ -1,0 +1,38 @@
+{
+  "name": "tyh-write-wx-js-sdk-from-scratch",
+  "version": "0.0.1",
+  "description": "从头开始写一个微信小程序 JS SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test-cov": "istanbul cover ./node_modules/mocha/bin/_mocha -- --reporter spec --check-leaks --bail --slow 200 test/",
+    "travis-test-cov": "istanbul cover --report lcovonly ./node_modules/mocha/bin/_mocha -- --reporter spec --check-leaks --bail --slow 200 test/",
+    "coveralls": "npm run travis-test-cov && cat ./coverage/lcov.info | coveralls",
+    "samver-minor": "npm version minor && git push origin master --tags",
+    "samver-patch": "npm version patch && git push origin master --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tangyouhua/tyh-write-wx-js-sdk-from-scratch.git"
+  },
+  "keywords": [
+    "qcloud",
+    "weapp",
+    "wechat",
+    "sdk",
+    "client",
+    "auth",
+    "websocket"
+  ],
+  "author": "唐尤华(tangyouhua)",
+  "license": "MIT",
+  "devDependencies": {
+    "coveralls": "^2.11.14",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.0",
+    "should": "^11.1.0",
+    "should-sinon": "0.0.5",
+    "sinon": "^1.17.6"
+  },
+  "dependencies": {}
+}
